@@ -1,0 +1,43 @@
+server:
+  port: 5001
+
+
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/dh?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&tinyInt1isBit=false&allowMultiQueries=true&serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
+    username:
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  redis:
+    host:
+    port: 6379
+    password:
+    database: 0
+    ssl: false
+dh:
+  resource:
+    article:
+      path: /root/dh
+
+
+jwt:
+  auth:
+    secret: 12138
+    expiration: 60000
+
+oss:
+  aliyun-oss:
+    access-key-id:
+    access-key-secret:
+    endpoint:
+    bucket-name:
+logging:
+  level:
+    com.homemylove.mapper: debug
